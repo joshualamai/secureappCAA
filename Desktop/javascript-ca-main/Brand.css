@@ -1,0 +1,26 @@
+/* 
+
+selector{  
+
+property: value; 
+
+} 
+
+*/ 
+
+p{font-family: 'Balsamiq Sans', cursive; 
+
+font-family: 'Merriweather Sans', sans-serif; 
+
+} 
+
+h1{font-family: 'Balsamiq Sans', cursive; 
+
+font-family: 'Cormorant Garamond', serif; 
+
+font-family: 'Merriweather Sans', sans-serif; 
+color: red;
+} 
+body{
+background-color: blue;
+}
