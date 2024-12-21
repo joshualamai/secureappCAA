@@ -1,10 +1,15 @@
 <h1>Books</h1>
 <%= form_with url: books_path, method: :get, local: true do %>
   <div class="form-group">
+   <h1>Books</h1>
+<%= form_with url: books_path, method: :get, local: true do %>
+  <div class="form-group">
     <%= label_tag :search, "Search Books" %>
     <%= text_field_tag :search, params[:search], class: 'form-control' %>
     <%= submit_tag 'Search', class: 'btn btn-primary mt-2' %>
   </div>
+<% end %>
+
 <% end %>
 <%= link_to 'New Book', new_book_path, class: 'btn btn-primary mb-3' %>
 <table class="table table-bordered table-hover table-sm">
@@ -28,3 +33,4 @@
       </tr>
     <% end %>
   </tbody>
+  
