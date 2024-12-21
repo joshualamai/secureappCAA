@@ -1,0 +1,30 @@
+<h1>Books</h1>
+<%= form_with url: books_path, method: :get, local: true do %>
+  <div class="form-group">
+    <%= label_tag :search, "Search Books" %>
+    <%= text_field_tag :search, params[:search], class: 'form-control' %>
+    <%= submit_tag 'Search', class: 'btn btn-primary mt-2' %>
+  </div>
+<% end %>
+<%= link_to 'New Book', new_book_path, class: 'btn btn-primary mb-3' %>
+<table class="table table-bordered table-hover table-sm">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+        <td>
+          <%= link_to 'Show', book_path(book), class: 'btn btn-info btn-sm' %>
+          <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-warning btn-sm' %>
+          <%= button_to 'Delete', book_path(book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
