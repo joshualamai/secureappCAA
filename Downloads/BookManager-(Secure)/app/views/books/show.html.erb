@@ -1,0 +1,9 @@
+<h1><%= @book.title %></h1>
+<p><strong>Author:</strong> <%= @book.author %></p>
+<p><strong>Published Date:</strong> <%= @book.published_date %></p>
+<p><strong>Description:</strong> <%= @book.description %></p>
+
+
+<%= link_to 'Back to Books', books_path, class: 'btn btn-secondary' %>
+<%= button_to 'Delete', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+

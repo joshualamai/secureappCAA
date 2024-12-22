@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BookManager</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <% flash.each do |key, message| %>
+        <div class="alert alert-<%= key == 'alert' ? 'danger' : 'success' %>" role="alert">
+          <%= message %>
+        </div>
+      <% end %>
+      
+      <nav class="mb-3">
+        <% if logged_in? %>
+          <form action="<%= logout_path %>" method="post" style="display:inline;">
+            <%= hidden_field_tag :_method, "delete" %>
+            <%= submit_tag "Log Out", class: "btn btn-danger" %>
+          </form>
+        <% else %>
+          <%= link_to "Log In", login_path, class: "btn btn-primary" %>
+        <% end %>
+        <% if logged_in? %>
+  <%= link_to "Logs", logs_path, class: "btn btn-secondary me-2" %>
+<% end %>
+
+      </nav>
+      
+
+      <%= yield %>
+    </div>
+    
+  </body>
+</html>

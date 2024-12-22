@@ -1,0 +1,66 @@
+body {
+  background: linear-gradient(to bottom, navy, purple); /* Smooth gradient background */
+  color: rgb(26, 201, 84); /* Default text color */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 50, 0.8); /* Slightly darker navy background */
+  border-radius: 8px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 10px 0;
+  color: white; /* Ensure default text color is visible */
+}
+
+strong {
+  color: lightblue; /* Distinguish labels for fields */
+}
+
+span {
+  color: rgba(139, 209, 241, 0.959); /* Ensure values are readable against the background */
+  font-weight: bold;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 50px auto; /* Center align the content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+.btn {
+  margin-right: 10px;
+  color: white; /* Ensure button text is readable */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
